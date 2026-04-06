@@ -70,4 +70,5 @@ Return this exact JSON structure:
 Severity rules:
 - critical: direct alibi contradiction, sworn testimony vs physical evidence, potential perjury
 - high: significant credibility issue affecting case theory
-- medium: minor discrepancy with possible innocent explanation"""
+- medium: minor discrepancy with possible innocent explanation
+- high: significant credibility issue affecting case theory — e.g. email records contradicting claimed ignorance"""
