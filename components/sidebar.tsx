@@ -2,6 +2,15 @@
 
 import { Document } from '@/types';
 import { Logo } from './logo';
+import { FolderManager } from './folder-manager';
+
+interface Folder {
+  id: string;
+  name: string;
+  documents: number;
+  contradictions: number;
+  created_at: string;
+}
 
 interface SidebarProps {
   documents: Document[];
@@ -12,6 +21,12 @@ interface SidebarProps {
   onUpload?: (file: File) => Promise<void>;
   isLoading?: boolean;
   hasData?: boolean;
+  // Folder management
+  folders?: Folder[];
+  activeFolder?: string | null;
+  onSelectFolder?: (folderId: string | null) => void;
+  onCreateFolder?: (name: string) => Promise<void>;
+  onDeleteFolder?: (folderId: string) => Promise<void>;
 }
 
 const docTypeColors: Record<string, string> = {
@@ -29,6 +44,11 @@ export function Sidebar({
   onUpload,
   isLoading = false,
   hasData = false,
+  folders = [],
+  activeFolder = null,
+  onSelectFolder,
+  onCreateFolder,
+  onDeleteFolder,
 }: SidebarProps) {
   const handleFileSelect = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -56,7 +76,18 @@ export function Sidebar({
             </span>
           </label>
 
-          <h3 className="text-sm font-semibold text-foreground mb-3">Documents</h3>
+          {folders && folders.length > 0 && onSelectFolder && onCreateFolder && onDeleteFolder && (
+            <FolderManager
+              folders={folders}
+              activeFolder={activeFolder || null}
+              onSelectFolder={onSelectFolder}
+              onCreateFolder={onCreateFolder}
+              onDeleteFolder={onDeleteFolder}
+              isLoading={isLoading}
+            />
+          )}
+
+          <h3 className={`text-sm font-semibold text-foreground mb-3 ${folders && folders.length > 0 ? 'mt-4' : ''}`}>Documents</h3>
           <div className="space-y-2">
             {documents.map((doc) => (
               <div

@@ -2,20 +2,17 @@ import json
 import re
 import os
 from dotenv import load_dotenv
-from groq import Groq
+import google.generativeai as genai
 from reader import read_document
 from prompts import EXTRACTION_PROMPT, CONTRADICTION_PROMPT
 
 load_dotenv()
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+model = genai.GenerativeModel("gemini-2.5-flash-lite")
 
 def call_gemini(prompt: str) -> dict:
-    chat = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
-        messages=[{"role": "user", "content": prompt}],
-        max_tokens=4096,
-    )
-    text = chat.choices[0].message.content.strip()
+    response = model.generate_content(prompt)
+    text = response.text.strip()
     text = re.sub(r'```json\s*', '', text)
     text = re.sub(r'```\s*', '', text)
     return json.loads(text.strip())

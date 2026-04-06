@@ -5,52 +5,83 @@ import { Contradiction, Claim, GraphNode, GraphEdge } from '@/types';
 import { ContradictionsTab } from './contradictions-tab';
 import { GraphView } from './graph-view';
 import { AllClaimsTab } from './all-claims-tab';
+import { TimelineView } from './timeline-view';
+
+interface TimelineEvent {
+  date: string;
+  contradiction: Contradiction;
+  severity: string;
+}
 
 interface MainAreaProps {
   contradictions: Contradiction[];
   claims: Claim[];
   graphNodes: GraphNode[];
   graphEdges: GraphEdge[];
+  timeline: TimelineEvent[];
+  totalDatedContradictions: number;
   isLoading?: boolean;
   error?: string | null;
   hasData?: boolean;
+  onExportPDF?: () => Promise<void>;
+  isExporting?: boolean;
 }
 
-type TabType = 'contradictions' | 'graph' | 'claims';
+type TabType = 'contradictions' | 'graph' | 'claims' | 'timeline';
 
 export function MainArea({
   contradictions,
   claims,
   graphNodes,
   graphEdges,
+  timeline,
+  totalDatedContradictions,
   isLoading = false,
   error = null,
   hasData = false,
+  onExportPDF,
+  isExporting = false,
 }: MainAreaProps) {
   const [activeTab, setActiveTab] = useState<TabType>('contradictions');
 
   const tabs: { id: TabType; label: string }[] = [
     { id: 'contradictions', label: 'Contradictions' },
+    { id: 'timeline', label: 'Timeline' },
     { id: 'graph', label: 'Graph View' },
     { id: 'claims', label: 'All Claims' },
   ];
 
   return (
     <div className="flex flex-col h-screen bg-background">
-      <div className="flex items-center border-b border-border bg-card">
-        {tabs.map((tab) => (
+      <div className="flex items-center justify-between border-b border-border bg-card px-6">
+        <div className="flex items-center">
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              className={`px-4 py-3 font-medium text-sm border-b-2 transition-colors ${
+                activeTab === tab.id
+                  ? 'text-foreground border-primary'
+                  : 'text-muted-foreground border-transparent hover:text-foreground'
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+        
+        {hasData && onExportPDF && (
           <button
-            key={tab.id}
-            onClick={() => setActiveTab(tab.id)}
-            className={`px-6 py-3 font-medium text-sm border-b-2 transition-colors ${
-              activeTab === tab.id
-                ? 'text-foreground border-primary'
-                : 'text-muted-foreground border-transparent hover:text-foreground'
-            }`}
+            onClick={onExportPDF}
+            disabled={isExporting}
+            className="px-4 py-2 bg-primary text-primary-foreground rounded font-medium text-sm hover:bg-primary/90 disabled:opacity-50 transition-colors flex items-center gap-2"
           >
-            {tab.label}
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            {isExporting ? 'Exporting...' : 'Export PDF'}
           </button>
-        ))}
+        )}
       </div>
 
       <div className="flex-1 overflow-hidden flex flex-col">
@@ -85,6 +116,7 @@ export function MainArea({
         {hasData && !isLoading && (
           <div className="flex-1 overflow-hidden">
             {activeTab === 'contradictions' && <ContradictionsTab contradictions={contradictions} />}
+            {activeTab === 'timeline' && <TimelineView timeline={timeline} totalDatedContradictions={totalDatedContradictions} />}
             {activeTab === 'graph' && <GraphView nodes={graphNodes} edges={graphEdges} />}
             {activeTab === 'claims' && <AllClaimsTab claims={claims} />}
           </div>
