@@ -48,16 +48,20 @@ export default function Home() {
   const [error, setError] = useState<string | null>(null);
   const [hasData, setHasData] = useState(false);
 
-  // Fetch folders on mount
+  // Fetch folders and data on mount
   useEffect(() => {
-    fetchFolders();
+    const initializeApp = async () => {
+      await fetchFolders();
+      // Load default folder data on mount (activeFolder is null by default)
+      // The backend will use the default folder when folder_id is not provided
+      fetchContradictions();
+    };
+    initializeApp();
   }, []);
 
   // Refetch data when active folder changes
   useEffect(() => {
-    if (activeFolder) {
-      fetchContradictions();
-    }
+    fetchContradictions();
   }, [activeFolder]);
 
   const fetchFolders = async () => {
