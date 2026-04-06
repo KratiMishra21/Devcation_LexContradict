@@ -11,6 +11,28 @@ app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], all
 
 # In-memory store
 current_data = {"claims": [], "contradictions": [], "summary": {}}
+uploaded_paths = []  # track all uploaded files
+
+@app.post("/upload")
+async def upload(file: UploadFile = File(...)):
+    suffix = os.path.splitext(file.filename)[1]
+    
+    # Save to a permanent temp location (not deleted after)
+    tmp_path = os.path.join(tempfile.gettempdir(), file.filename)
+    with open(tmp_path, "wb") as f:
+        f.write(await file.read())
+    
+    # Add to list and re-run extraction on ALL uploaded files
+    if tmp_path not in uploaded_paths:
+        uploaded_paths.append(tmp_path)
+    
+    result = extract_all(uploaded_paths)
+    current_data.update(result)
+
+    return {
+        "claims_found": result["summary"]["total_claims"],
+        "contradictions_found": result["summary"]["total_contradictions"]
+    }
 
 @app.get("/health")
 def health():
