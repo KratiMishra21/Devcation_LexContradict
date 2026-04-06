@@ -15,3 +15,10 @@ node_modules
 .next/
 .DS_Store
 extractor/.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+.env
