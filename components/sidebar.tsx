@@ -76,9 +76,9 @@ export function Sidebar({
             </span>
           </label>
 
-          {folders && folders.length > 0 && onSelectFolder && onCreateFolder && onDeleteFolder && (
+          {onSelectFolder && onCreateFolder && onDeleteFolder && (
             <FolderManager
-              folders={folders}
+              folders={folders || []}
               activeFolder={activeFolder || null}
               onSelectFolder={onSelectFolder}
               onCreateFolder={onCreateFolder}
@@ -87,7 +87,7 @@ export function Sidebar({
             />
           )}
 
-          <h3 className={`text-sm font-semibold text-foreground mb-3 ${folders && folders.length > 0 ? 'mt-4' : ''}`}>Documents</h3>
+          <h3 className="text-sm font-semibold text-foreground mb-3 mt-4">Documents</h3>
           <div className="space-y-2">
             {documents.map((doc) => (
               <div
