@@ -1,0 +1,328 @@
+{
+  "claims": [
+    {
+      "claim_id": "d1c01",
+      "entity": "Rajesh Mehta",
+      "action": "was present at Delhi HQ",
+      "location": "Delhi HQ",
+      "time": "March 3rd, 2024, 9 AM - 2 PM",
+      "raw_text": "I was present at our Delhi headquarters the entire morning. I arrived at 9 AM and did not leave until after 2 PM.",
+      "source_doc": "mehta_deposition.txt",
+      "page_ref": null,
+      "claim_type": "testimony",
+      "confidence": 0.6
+    },
+    {
+      "claim_id": "d1c02",
+      "entity": "Rajesh Mehta",
+      "action": "was not present at the board meeting",
+      "location": null,
+      "time": "February 28th",
+      "raw_text": "No, I was traveling internationally.",
+      "source_doc": "mehta_deposition.txt",
+      "page_ref": null,
+      "claim_type": "testimony",
+      "confidence": 0.6
+    },
+    {
+      "claim_id": "d1c03",
+      "entity": "Rajesh Mehta",
+      "action": "had no knowledge of the board meeting discussion",
+      "location": null,
+      "time": "February 28th",
+      "raw_text": "I had no knowledge of what was discussed.",
+      "source_doc": "mehta_deposition.txt",
+      "page_ref": null,
+      "claim_type": "testimony",
+      "confidence": 0.6
+    },
+    {
+      "claim_id": "d1c04",
+      "entity": "Rajesh Mehta",
+      "action": "did not authorize the funds transfer",
+      "location": null,
+      "time": "March 3rd, 2024",
+      "raw_text": "Absolutely not. I was unaware of any such transfer.",
+      "source_doc": "mehta_deposition.txt",
+      "page_ref": null,
+      "claim_type": "testimony",
+      "confidence": 0.6
+    },
+    {
+      "claim_id": "d1c05",
+      "entity": "Rajesh Mehta",
+      "action": "was unaware of the funds transfer",
+      "location": null,
+      "time": "March 3rd, 2024",
+      "raw_text": "Absolutely not. I was unaware of any such transfer.",
+      "source_doc": "mehta_deposition.txt",
+      "page_ref": null,
+      "claim_type": "testimony",
+      "confidence": 0.6
+    },
+    {
+      "claim_id": "d1c06",
+      "entity": "Rajesh Mehta",
+      "action": "did not recall receiving emails regarding Project Horizon",
+      "location": null,
+      "time": null,
+      "raw_text": "I don't recall receiving any such emails.",
+      "source_doc": "mehta_deposition.txt",
+      "page_ref": null,
+      "claim_type": "testimony",
+      "confidence": 0.55
+    },
+    {
+      "claim_id": "d2c01",
+      "entity": "Rajesh Mehta",
+      "action": "badging into the Mumbai branch",
+      "location": "Mumbai HQ",
+      "time": "March 3rd, 2024, 10:23 AM",
+      "raw_text": "Security footage from Mumbai office shows Rajesh Mehta badging into the Mumbai branch at 10:23 AM on March 3rd, 2024.",
+      "source_doc": "exhibits_bundle.txt",
+      "page_ref": "Exhibit A",
+      "claim_type": "physical_evidence",
+      "confidence": 0.95
+    },
+    {
+      "claim_id": "d2c02",
+      "entity": "Rajesh Mehta",
+      "action": "attended the board meeting",
+      "location": "unknown",
+      "time": "February 28, 2024, 3:15 PM",
+      "raw_text": "Attendees: Rajesh Mehta (signed), Priya Sharma, Vikram Nair.",
+      "source_doc": "exhibits_bundle.txt",
+      "page_ref": "Exhibit B",
+      "claim_type": "documentary",
+      "confidence": 0.95
+    },
+    {
+      "claim_id": "d2c03",
+      "entity": "Rajesh Mehta",
+      "action": "signed the attendance register",
+      "location": "unknown",
+      "time": "February 28, 2024, 3:15 PM",
+      "raw_text": "Mehta signed the attendance register at 3:15 PM.",
+      "source_doc": "exhibits_bundle.txt",
+      "page_ref": "Exhibit B",
+      "claim_type": "documentary",
+      "confidence": 0.95
+    },
+    {
+      "claim_id": "d2c04",
+      "entity": "Rajesh Mehta",
+      "action": "authorized a wire transfer of Rs 4.2 crore",
+      "location": "unknown",
+      "time": "March 3rd, 2024, 11:45 AM",
+      "raw_text": "Transfer of Rs 4.2 crore authorized via digital signature matching Rajesh Mehta's credentials, timestamped March 3rd, 11:45 AM.",
+      "source_doc": "exhibits_bundle.txt",
+      "page_ref": "Exhibit C",
+      "claim_type": "physical_evidence",
+      "confidence": 0.95
+    },
+    {
+      "claim_id": "d2c05",
+      "entity": "Rajesh Mehta",
+      "action": "received an email",
+      "location": "unknown",
+      "time": "February 20th, 2024, 9:14 AM",
+      "raw_text": "Email was opened at 9:14 AM that day.",
+      "source_doc": "exhibits_bundle.txt",
+      "page_ref": "Exhibit D",
+      "claim_type": "documentary",
+      "confidence": 0.95
+    },
+    {
+      "claim_id": "d2c06",
+      "entity": "Rajesh Mehta",
+      "action": "was included in the CC list for Project Horizon thread",
+      "location": "unknown",
+      "time": "February 20th, 2024",
+      "raw_text": "CC list for Project Horizon thread dated February 20th includes rajesh.mehta@company.com.",
+      "source_doc": "exhibits_bundle.txt",
+      "page_ref": "Exhibit D",
+      "claim_type": "documentary",
+      "confidence": 0.95
+    },
+    {
+      "claim_id": "d3c01",
+      "entity": "Rajesh Mehta",
+      "action": "was present at the February 28th board meeting",
+      "location": null,
+      "time": "February 28th",
+      "raw_text": "Rajesh Mehta was present at the February 28th board meeting",
+      "source_doc": "witness_statements.txt",
+      "page_ref": null,
+      "claim_type": "testimony",
+      "confidence": 0.6
+    },
+    {
+      "claim_id": "d3c02",
+      "entity": "Rajesh Mehta",
+      "action": "sat next to Priya Sharma and discussed the transfer proposal",
+      "location": null,
+      "time": "February 28th",
+      "raw_text": "He sat next to me and we discussed the transfer proposal",
+      "source_doc": "witness_statements.txt",
+      "page_ref": null,
+      "claim_type": "testimony",
+      "confidence": 0.6
+    },
+    {
+      "claim_id": "d3c03",
+      "entity": "Priya Sharma",
+      "action": "called Rajesh Mehta at 11 AM",
+      "location": null,
+      "time": "March 3rd, 11 AM",
+      "raw_text": "I called Mehta at 11 AM",
+      "source_doc": "witness_statements.txt",
+      "page_ref": null,
+      "claim_type": "testimony",
+      "confidence": 0.6
+    },
+    {
+      "claim_id": "d3c04",
+      "entity": "Rajesh Mehta",
+      "action": "answered the phone and said he was at the Mumbai office",
+      "location": "Mumbai office",
+      "time": "March 3rd, 11 AM",
+      "raw_text": "he picked up, saying he was at the Mumbai office wrapping something up",
+      "source_doc": "witness_statements.txt",
+      "page_ref": null,
+      "claim_type": "testimony",
+      "confidence": 0.6
+    },
+    {
+      "claim_id": "d3c05",
+      "entity": "Rajesh Mehta",
+      "action": "did not enter the Delhi headquarters",
+      "location": "Delhi HQ",
+      "time": "March 3rd, 8 AM to 4 PM",
+      "raw_text": "I did not see Mr. Mehta enter the Delhi headquarters at any point during my 8 AM to 4 PM shift",
+      "source_doc": "witness_statements.txt",
+      "page_ref": null,
+      "claim_type": "testimony",
+      "confidence": 0.6
+    }
+  ],
+  "contradictions": [
+    {
+      "contradiction_id": "con001",
+      "conflict_reason": "Rajesh Mehta cannot be present at both Delhi HQ and Mumbai HQ at the same time on March 3rd, 2024",
+      "conflict_type": "location",
+      "severity": "critical",
+      "confidence": 0.95,
+      "ai_analysis": "This contradiction directly impacts the case by questioning Rajesh Mehta's alibi, potentially indicating perjury. The conflicting claims of his presence in two different locations at the same time undermine the credibility of his testimony. This discrepancy may have significant implications for the case outcome.",
+      "claim_a": {
+        "claim_id": "d1c01",
+        "entity": "Rajesh Mehta",
+        "raw_text": "I was present at our Delhi headquarters the entire morning. I arrived at 9 AM and did not leave until after 2 PM.",
+        "source_doc": "mehta_deposition.txt",
+        "page_ref": null
+      },
+      "claim_b": {
+        "claim_id": "d2c01",
+        "entity": "Rajesh Mehta",
+        "raw_text": "Security footage from Mumbai office shows Rajesh Mehta badging into the Mumbai branch at 10:23 AM on March 3rd, 2024.",
+        "source_doc": "exhibits_bundle.txt",
+        "page_ref": "Exhibit A"
+      }
+    },
+    {
+      "contradiction_id": "con002",
+      "conflict_reason": "Rajesh Mehta claims he was not present at the board meeting, but another claim states he was present",
+      "conflict_type": "presence",
+      "severity": "critical",
+      "confidence": 0.92,
+      "ai_analysis": "This contradiction raises serious concerns about Rajesh Mehta's testimony, potentially indicating intentional deception. The conflicting claims about his presence at the board meeting may be used to challenge his credibility and potentially lead to perjury charges. This discrepancy could significantly impact the case theory and outcome.",
+      "claim_a": {
+        "claim_id": "d1c02",
+        "entity": "Rajesh Mehta",
+        "raw_text": "No, I was traveling internationally.",
+        "source_doc": "mehta_deposition.txt",
+        "page_ref": null
+      },
+      "claim_b": {
+        "claim_id": "d3c01",
+        "entity": "Rajesh Mehta",
+        "raw_text": "Rajesh Mehta was present at the February 28th board meeting",
+        "source_doc": "witness_statements.txt",
+        "page_ref": null
+      }
+    },
+    {
+      "contradiction_id": "con003",
+      "conflict_reason": "Rajesh Mehta claims he did not authorize the funds transfer, but another claim states he authorized it via digital signature",
+      "conflict_type": "knowledge",
+      "severity": "critical",
+      "confidence": 0.96,
+      "ai_analysis": "This contradiction directly impacts the case by questioning Rajesh Mehta's involvement in the funds transfer. The conflicting claims about his authorization of the transfer may indicate perjury and have significant implications for the case outcome. This discrepancy may be used to challenge his testimony and credibility.",
+      "claim_a": {
+        "claim_id": "d1c04",
+        "entity": "Rajesh Mehta",
+        "raw_text": "Absolutely not. I was unaware of any such transfer.",
+        "source_doc": "mehta_deposition.txt",
+        "page_ref": null
+      },
+      "claim_b": {
+        "claim_id": "d2c04",
+        "entity": "Rajesh Mehta",
+        "raw_text": "Transfer of Rs 4.2 crore authorized via digital signature matching Rajesh Mehta's credentials, timestamped March 3rd, 11:45 AM.",
+        "source_doc": "exhibits_bundle.txt",
+        "page_ref": "Exhibit C"
+      }
+    },
+    {
+      "contradiction_id": "con004",
+      "conflict_reason": "Rajesh Mehta claims he did not recall receiving emails regarding Project Horizon, but another claim states he received and opened an email",
+      "conflict_type": "knowledge",
+      "severity": "high",
+      "confidence": 0.88,
+      "ai_analysis": "This contradiction raises concerns about Rajesh Mehta's credibility and potential dishonesty. The conflicting claims about his knowledge of Project Horizon may be used to challenge his testimony and impact the case theory. This discrepancy may indicate a significant credibility issue, but its impact on the case outcome is somewhat lower than direct alibi contradictions.",
+      "claim_a": {
+        "claim_id": "d1c06",
+        "entity": "Rajesh Mehta",
+        "raw_text": "I don't recall receiving any such emails.",
+        "source_doc": "mehta_deposition.txt",
+        "page_ref": null
+      },
+      "claim_b": {
+        "claim_id": "d2c05",
+        "entity": "Rajesh Mehta",
+        "raw_text": "Email was opened at 9:14 AM that day.",
+        "source_doc": "exhibits_bundle.txt",
+        "page_ref": "Exhibit D"
+      }
+    },
+    {
+      "contradiction_id": "con005",
+      "conflict_reason": "Rajesh Mehta claims he did not enter the Delhi headquarters, but another claim states he was present at the Delhi HQ",
+      "conflict_type": "location",
+      "severity": "critical",
+      "confidence": 0.94,
+      "ai_analysis": "This contradiction directly impacts the case by questioning Rajesh Mehta's alibi and credibility. The conflicting claims about his presence at the Delhi HQ may indicate perjury and have significant implications for the case outcome. This discrepancy may be used to challenge his testimony and credibility.",
+      "claim_a": {
+        "claim_id": "d3c05",
+        "entity": "Rajesh Mehta",
+        "raw_text": "I did not see Mr. Mehta enter the Delhi headquarters at any point during my 8 AM to 4 PM shift",
+        "source_doc": "witness_statements.txt",
+        "page_ref": null
+      },
+      "claim_b": {
+        "claim_id": "d1c01",
+        "entity": "Rajesh Mehta",
+        "raw_text": "I was present at our Delhi headquarters the entire morning. I arrived at 9 AM and did not leave until after 2 PM.",
+        "source_doc": "mehta_deposition.txt",
+        "page_ref": null
+      }
+    }
+  ],
+  "summary": {
+    "total_claims": 17,
+    "total_contradictions": 5,
+    "critical": 4,
+    "high": 1,
+    "medium": 0,
+    "documents_processed": 3
+  }
+}
