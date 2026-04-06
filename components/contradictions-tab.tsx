@@ -47,7 +47,7 @@ export function ContradictionsTab({ contradictions }: ContradictionsTabProps) {
       <div className="border-b border-border p-4">
         <p className="text-sm text-muted-foreground mb-3">Filter by severity</p>
         <div className="flex gap-2">
-          {(['All', 'critical', 'high', 'medium'] as const).map((severity) => (
+          {(['All', 'critical', 'high', 'medium', 'low'] as const).map((severity) => (
             <button
               key={severity}
               onClick={() => setSelectedSeverity(severity)}
