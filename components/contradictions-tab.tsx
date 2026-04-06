@@ -67,7 +67,7 @@ export function ContradictionsTab({ contradictions }: ContradictionsTabProps) {
         <div className="space-y-3">
           {filtered.map((contradiction) => {
             const isExpanded = expandedId === contradiction.contradiction_id;
-            const colors = severityColors[contradiction.severity as SeverityType];
+            const colors = severityColors[contradiction.severity as SeverityType] ?? severityColors['low'];
 
             return (
               <div
